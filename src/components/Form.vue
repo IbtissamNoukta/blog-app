@@ -1,12 +1,12 @@
 <script setup>
 import { reactive } from 'vue'
-import { useCounterStore } from '@/stores/counter'
+import { usePostStore } from '@/stores/posts'
 import moment from 'moment';
 import { v4 as uuidv4 } from 'uuid';
 
 //get store
 //{}=>distractring no need to use posts.addPost
-const { addPost } = useCounterStore()
+const { addPost } = usePostStore()
 
 //set data
 const data = reactive({
