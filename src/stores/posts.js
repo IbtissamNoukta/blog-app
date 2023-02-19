@@ -1,7 +1,7 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 
-export const useCounterStore = defineStore('posts', () => {
+export const usePostStore = defineStore('posts', () => {
 //state
   // we use local storage if we refresh (actualiser) page data document't go
   //kn7wloh mn json ljs object
@@ -11,5 +11,15 @@ export const useCounterStore = defineStore('posts', () => {
     this.posts.unshift(post);
     localStorage.setItem("posts", JSON.stringify(this.posts));
   }
-  return { posts, addPost }
+//getter
+//une fois tmodifier ktreturni jdid
+  function getPosts(){
+    return this.posts;
+  }
+  function getPost(postId){
+    return this.posts.find(post => post.id === postId);
+  }
+
+  return { posts, addPost, getPosts, getPost }
 })
+
