@@ -31,7 +31,7 @@ const storeComment = () => {
 </script>
 
 <template>
-    <div class="card mt-2">
+    <div class="card mt-2 ">
         <div class="card-body">
           <form> 
             <div class="mb-3">
@@ -51,7 +51,7 @@ const storeComment = () => {
 
             <button :disabled="!data.comment.username || !data.comment.body"
             @click.prevent="storeComment"
-            type="submit" class="btn btn-primary">Comment</button>
+            type="submit" class="btn btn-success">Comment</button>
         </form>  
         </div>
     </div>

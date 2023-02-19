@@ -15,6 +15,10 @@ const props = defineProps({
     post_details : {
       type : Object,
       required : true,
+    },
+    get_post_comments : {
+      type : Number,
+      required : true, 
     }
 });
 console.log(props.post_details)
@@ -50,6 +54,7 @@ const storeLike = (PostId) => {
     <RouterLink :to="`/post/${post.id}`" class="text-decoration-none text-dark">
       <span style="cursor: pointer;">
         <i class="bi bi-chat"></i>
+        {{ get_post_comments }}
       </span>
     </RouterLink>
     <span class="text-secondary">
@@ -75,6 +80,7 @@ const storeLike = (PostId) => {
     </span>
       <span style="cursor: pointer;">
         <i class="bi bi-chat"></i>
+        {{ get_post_comments }}
       </span>
     <span class="text-secondary">
         <i class="bi bi-alarm"></i>

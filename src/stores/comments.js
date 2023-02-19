@@ -13,8 +13,8 @@ export const useCommentStore = defineStore('comments', () => {
       }
     //getter
     //une fois tmodifier ktreturni jdid
-      function getPostComments(commentId){
-        return this.comments.filter(comment => comment.id_post === commentId).length;
+      function getPostComments(postId){
+        return this.comments.filter(comment => comment.id_post === postId);
       }
     
       return { comments, addComment, getPostComments }

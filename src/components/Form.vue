@@ -51,7 +51,7 @@ const storePost = () => {
 
             <button :disabled="!data.post.username || !data.post.body"
             @click.prevent="storePost"
-            type="submit" class="btn btn-primary">Share</button>
+            type="submit" class="btn btn-success">Share</button>
         </form>  
         </div>
     </div>
